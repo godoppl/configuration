@@ -3,17 +3,12 @@ startup_message off
  
 # Turn the even more annoying whole-screen-flash-on-tab-complete "feature"
 vbell off
-  
-# I use control+a for beginning-of-line, this remaps it to the tick/tilda key
-escape ``
-
-# Bind tick+e to show the tick character since tick+tick is too convenience to toggle windows
-escape `e
-
+ 
 # Window list at the bottom. hostname, centered tabs and redmarked active windows:
 #shelltitle '$ |'
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%? %= %{g}][%{B} %m/%d %{W}%c %{g}]'
+termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 
 defscrollback 50000
 
