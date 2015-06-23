@@ -97,12 +97,15 @@ chatnets = {
     max_whois = "30";
   };
   SILC = { type = "SILC"; };
-  equalify = { type = "IRC"; };
+  equalify = {
+    type = "IRC";
+    autosendcmd = "/^msg nickserv identify upset768;wait 2000";
+  };
 };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; }
+  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
   { name = "#equalify"; chatnet = "equalify"; autojoin = "Yes"; }
 );
 
